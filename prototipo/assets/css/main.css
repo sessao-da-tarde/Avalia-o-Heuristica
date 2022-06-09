@@ -1,42 +1,215 @@
-    * {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        margin: 0;
-        padding: 0;
-        color: white;
-    }
-    
-    .container {}
-    
-    .nav-item {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 15px;
-    }
-    
-    .nav-item:hover {
-        color: #FEC708;
-        text-decoration: none;
-    }
-    
-    .navbar-brand {
-        width: 150px;
-    }
-    
-    nav {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: baseline;
-        width: 100%;
-        border-bottom: 1px solid white;
-    }
-    
-    main {
-        background-color: #044377;
-        height: 90vh;
-    }
-    
-    .form {
-        width: 80%;
-        display: flex;
-    }
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.container {
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.nav-item:hover {
+  color: #fec708;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  width: 150px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+main {
+  background-color: #fff;
+  height: 90vh;
+}
+
+input {
+ padding: 10px 80px;
+ background-color: rgb(211, 211, 211);
+}
+
+label {
+  color: white;
+}
+option {
+  color: black;
+}
+select{
+    color: black;
+}
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.base {
+  padding: 60px 0;
+}
+
+
+
+
+/* ------------------------------------------- */
+
+@media only screen and (min-width: 1200px) {
+  /* line 117, resources/assets/styles/common/_global.scss */
+
+  .container {
+    max-width: 700px;
+  }
+}
+
+
+/* line 342, resources/assets/styles/common/_global.scss */
+
+.form_padrao .form-group.flutuante input[type="text"],
+.form_padrao .comment-form p.flutuante input[type="text"],
+.comment-form .form_padrao p.flutuante input[type="text"],
+.form_padrao .search-form label.flutuante input[type="text"],
+.search-form .form_padrao label.flutuante input[type="text"],
+.form_padrao .form-group.flutuante input[type="password"],
+.form_padrao .comment-form p.flutuante input[type="password"],
+.comment-form .form_padrao p.flutuante input[type="password"],
+.form_padrao .search-form label.flutuante input[type="password"],
+.search-form .form_padrao label.flutuante input[type="password"],
+.form_padrao .form-group.flutuante input[type="email"],
+.form_padrao .comment-form p.flutuante input[type="email"],
+.comment-form .form_padrao p.flutuante input[type="email"],
+.form_padrao .search-form label.flutuante input[type="email"],
+.search-form .form_padrao label.flutuante input[type="email"],
+.form_padrao .form-group.flutuante input[type="tel"],
+.form_padrao .comment-form p.flutuante input[type="tel"],
+.comment-form .form_padrao p.flutuante input[type="tel"],
+.form_padrao .search-form label.flutuante input[type="tel"],
+.search-form .form_padrao label.flutuante input[type="tel"],
+.form_padrao .form-group.flutuante input[type="date"],
+.form_padrao .comment-form p.flutuante input[type="date"],
+.comment-form .form_padrao p.flutuante input[type="date"],
+.form_padrao .search-form label.flutuante input[type="date"],
+.search-form .form_padrao label.flutuante input[type="date"],
+.form_padrao .form-group.flutuante textarea,
+.form_padrao .comment-form p.flutuante textarea,
+.comment-form .form_padrao p.flutuante textarea,
+.form_padrao .search-form label.flutuante textarea,
+.search-form .form_padrao label.flutuante textarea {
+  width: 100%;
+  background-color: white;
+  border: 0;
+  outline: none !important;
+  height: 55px;
+  padding: 10px;
+  color: #032550;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  border-radius: 8px;
+}
+
+
+
+.form_padrao select {
+  width: 100%;
+  background-color: white;
+  border: 0;
+  outline: none !important;
+  height: 55px;
+  padding: 0 25px;
+  color: rgba(3, 37, 80, 0.5);
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  border-radius: 8px;
+}
+
+
+
+.form_padrao .esqueci {
+  color: #032550;
+  opacity: 0.5;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+
+
+.form_padrao button {
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+/* line 480, resources/assets/styles/common/_global.scss */
+
+.form_padrao button.h_50 {
+  height: 50px;
+}
+
+/* line 484, resources/assets/styles/common/_global.scss */
+
+.form_padrao button.btn_add {
+  border: dashed 1px #00A04E;
+  border-radius: 0;
+}
+
+/* line 488, resources/assets/styles/common/_global.scss */
+
+.form_padrao button.btn_add span {
+  color: #00A04E;
+  margin-right: 5px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  font-size: 16px;
+}
+
+/* line 495, resources/assets/styles/common/_global.scss */
+
+.form_padrao button.btn_add:hover {
+  background-color: #00A04E;
+  color: #FFFFFF;
+}
+
+/* line 499, resources/assets/styles/common/_global.scss */
+
+.form_padrao button.btn_add:hover span {
+  color: #FFFFFF;
+}
+
+.btn-verde {
+  padding: .7rem 3rem;
+  border: none;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-weight: 300;
+  background: #00A04E;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+

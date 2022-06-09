@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <!-- Required meta tags -->
@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Formulário - Associado</title>
     <link rel="stylesheet" href="/assets/css/main.css">
+
 </head>
 
 <body>
@@ -25,110 +27,126 @@
             <a class="nav-item" href="">ASSOCIE-SE</a>
         </div>
     </nav>
-    <main>
-        <section>
-            <div class="form">
-                <form>
+    <section class="base">
+        <main class="container">
+            <div class="row" style="background-color: #04438E;padding: 40px 20px; border-radius:8px;">
+                <div>
+                    <p class="title">dados da empresa</p>
+                </div>
+                <div class="col-md-12">
+                    <form enctype="multipart/form-data" method="post" id="afiliadoform" name="afiliadoform"
+                        class="form_padrao">
+                        <div class="form-row">
+                            <div class="form-group col-8 flutuante">
+                                <input placeholder="Nome Comercial*" type="text" name="nomefantasia" id="nome"
+                                    required="">
+                            </div>
+                            <div class="form-group col-4"><select type="text" name="TP_EMPRESA" id="TP_EMPRESA"
+                                    required="">
+                                    <option value="" selected hidden disabled="">Tipo empresa</option>
+                                    <option value="PJ">Pessoa Jurídica</option>
+                                    <option value="AE">Associação ou Entidade</option>
+                                    <option value="PL">Profissional Liberal</option>
+                                    <option value="AUT">Autônomo</option>
+                                    <option value="MEI">MEI</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-12 flutuante"><input placeholder="Razão Social*" type="text"
+                                    name="nome" id="nome" size="50" maxlength="50"
+                                    data-com.bitwarden.browser.user-edited="yes">
+                            </div>
+                            <div class="form-group col-6 flutuante"><input placeholder="CPF/CNPJ*" type="text"
+                                    name="cgccfo" id="cgccfo" required="" inputmode="text">
+                            </div>
 
-                    <!-- caixas de texto -->
-                    <div class="form-group">
-                        <label for="usuario">Usuário</label>
-                        <input class="form-control" type="text" id="usuario" placeholder="Digite seu usuário">
-                    </div>
+                            <div class="form-group col-6 flutuante"><input placeholder="Inscrição Estadual*" type="text"
+                                    name="inscrestadual" id="inscrestadual"
+                                    data-com.bitwarden.browser.user-edited="yes">
+                            </div>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input class="form-control" type="email" id="email" placeholder="Digite seu email" readonly>
-                        <small class="form-text">Email será validado</small>
-                    </div>
-
-                    <!-- select -->
-                    <div class="form-group">
-                        <label for="estados">Estados</label>
-                        <select class="form-control" id="estados">
-                            <option>Acre</option>
-                            <option>Alagoas</option>
-                            <option>Amapá</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-
-                    <!-- textarea -->
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea class="form-control" id="mensagem" rows="3"></textarea>
-                    </div>
-
-                    <!-- file input -->
-                    <div class="form-group">
-                        <label for="arquivo">Arquivo</label>
-                        <input class="form-control-file" type="file" id="arquivo">
-                    </div>
-
-
-                    <!-- custom file input -->
-                    <div class="custom-file">
-                        <input class="custom-file-input" type="file" id="arquivo">
-                        <label class="custom-file-label">Selecione arquivo</label>
-                    </div>
-                    <br><br>
-
-                    <!-- range -->
-                    <div class="form-group">
-                        <label id="range">Satisfação</label>
-                        <input class="custom-range" type="range" id="range" min="1" max="5">
-                    </div>
-
-                    <!-- button -->
-                    <input class="btn btn-primary" type="submit" value="Salvar">
-
-                </form>
-                <br><br>
-
-                <!-- Formulário inline -->
-                <form class="form-inline">
-                    <input class="form-control mr-2" type="text" placeholder="Digite seu usuário">
-                    <input class="form-control mr-2" type="password" placeholder="Digite sua senha">
-                    <input class="btn btn-primary" type="submit" value="Logar">
-                </form>
-                <br><br>
-
-                <!-- 
-                Validação de formulário 
-                Classes: is-valid, is-invalid, invalid-feedback, valid-feedback
-                -->
-                <form>
-
-                    <div class="form-group">
-                        <label for="email-usuario">email</label>
-                        <input class="form-control is-valid" type="text" id="email-usuario" placeholder="Digite seu e-mail">
-                        <div class="valid-feedback">
-                            Email válido
+                            <div class="form-group col-md-4 flutuante"><input placeholder="CEP*" type="text" name="cep"
+                                    id="cep" id="cep" name="form_cep" required onblur="consultacep(this.value);"></div>
+                            <div class="form-group col-md-6 flutuante"><input placeholder="Endereço*" type="text"
+                                    name="rua" id="endereco" required=""></div>
+                            <div class="form-group col-md-2 flutuante"><input placeholder="Número*" type="text"
+                                    name="numero" id="numero" required=""></div>
+                            <div class="form-group col-md-6 flutuante"><input placeholder="Complemento*" type="text"
+                                    name="complemento" id="complemento">
+                            </div>
+                            <div class="form-group col-md-6 flutuante"><input placeholder="Bairro*" type="text"
+                                    name="bairro" id="bairro" required=""></div>
+                            <div class="form-group col-md-4 flutuante"><input placeholder="Cidade*" type="text"
+                                    name="codmunicipio" id="cidade" required=""></div>
+                            <div class="form-group col-md-2 flutuante"><input placeholder="Estado*" type="text"
+                                    name="codetd" id="estado" required=""></div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="senha-usuario">Senha</label>
-                        <input class="form-control is-invalid" type="email" id="senha-usuario" placeholder="Digite sua senha">
-                        <div class="invalid-feedback">
-                            Senha inválida
+                        <div>
+                            <p class="title">DADOS DO SÓCIO PROPRIETÁRIO</p>
                         </div>
-                    </div>
-
-                    <input class="btn btn-primary" type="submit" value="Logar">
-
-                </form>
+                        <div class="form-row">
+                            <div class="form-group col-md-8 flutuante"><input placeholder="Nome do Sócio Proprietário*"
+                                    type="text" name="CONTATO" id="CONTATO" size="50" maxlength="50" required=""></div>
+                            <div class="form-group col-md-4 flutuante"><input placeholder="CPF*" type="text" name="CPF"
+                                    id="CPF" data-inputmask="'mask': '999.999.999-99'" required="" inputmode="text">
+                            </div>
+                            <div class="form-group col-md-4"><select type="text" name="SEXO" id="SEXO" required="">
+                                    <option value="" selected hidden disabled="">Sexo</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-8 flutuante"><input placeholder="Data de Nascimento*"
+                                    type="date" name="DATANASCIMENTO" id="DATANASCIMENTO" required=""></div>
+                            <div class="form-group col-md-6 flutuante"><input placeholder="Celular*" type="text"
+                                    name="CELULAR" id="CELULAR" data-inputmask="'mask': '(99)99999-9999'" required=""
+                                    inputmode="text"></div>
+                            <div class="form-group col-md-6 flutuante"><input placeholder="Telefone*" type="text"
+                                    name="TELEFONE" id="TELEFONE" data-inputmask="'mask': '(99)9999-9999'"
+                                    inputmode="text"></div>
+                            <div class="form-group col-md-12 flutuante"><input placeholder="E-mai*" type="text"
+                                    name="EMAIL" id="EMAIL" required=""></div>
+                            <div class="form-group col-md-12 flutuante"><input placeholder="Confirme o E-mail*"
+                                    onpaste="return false" ondrop="return false" type="text" name="CONFIRM_EMAIL"
+                                    id="CONFIRM_EMAIL" required=""></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="aceite" id="aceite" required="">
+                            <label for="aceite">Li e aceito os <a
+                                    href="https://www.cdlbh.com.br/politica-de-privacidade/" target="_blank"
+                                    rel="noopener noreferrer">Política de Privacidade e Termos de Uso</a>.</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 col-6">
+                                <button type="submit" class="btn btn-verde p-0">Continuar</button>
+                            </div>
+                        </div>
+                        <div class="alert alert-primary d-none mt-3" role="alert" id="alerta"></div>
+                    </form>
+                </div>
             </div>
-        </section>
-    </main>
-
+        </main>
+    </section>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js "
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n "
+        crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 "
+        crossorigin="anonymous "></script>
+
+
+
+
 </body>
+<script src="colect/cep.js"></script>
+<script src="colect/jquery-1.12.4.min.js"></script>
+<script src="assets/js/validacao.js"></script>
+<script src="assets//"></script>
 
 </html>
